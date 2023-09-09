@@ -24,10 +24,12 @@ function App() {
     }
   }, 1000);
 
+
   
 
   return (
     <>
+      {console.log(process.env.REACT_APP_THE_MESSAGE)}
       {msg ? (
         <p className="msg">{process.env.REACT_APP_THE_MESSAGE}</p>
       ) : (
