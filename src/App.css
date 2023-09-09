@@ -14,6 +14,8 @@
   color: var(--secondColor);
 }
 
+
+
 body {
   height: 100vh;
   width: 100vw;
@@ -22,6 +24,11 @@ body {
   font-style: italic;
   font-family: "Brush Script MT, cursive";
   color: var(--mainColor);
+}
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,7 +91,7 @@ h2 {
 
 @media (max-width: 767px) {
   .box {
-    width: 80%;
+    width: 90%;
   }
   .box span::after {
     font-size: 1rem;
