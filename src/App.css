@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --mainColor: red;
+  --secondColor: #000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::selection {
+  background-color: var(--mainColor);
+  color: var(--secondColor);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: var(--secondColor);
+  font-style: italic;
+  font-family: "Brush Script MT, cursive";
+  color: var(--mainColor);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+h2 {
+  position: absolute;
+  top: 10%;
+  text-align: center;
+  font-size: 3rem;
+  white-space: nowrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 767px) {
+  h2 {
+    top: 34%;
+    font-size: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.box {
+  border: 1px solid var(--mainColor);
+  padding: 10px;
+  width: 500px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+}
+
+.box span {
+  flex: 1;
+  border-radius: 8px;
+  border: 1px solid var(--mainColor);
+  background-color: var(--mainColor);
+  color: var(--secondColor);
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.box span::after {
+  content: attr(data-name);
+  position: absolute;
+  width: 100%;
+  background-color: var(--secondColor);
+  color: var(--mainColor);
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding: 5px;
+  left: 0;
+  bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .box {
+    width: 80%;
   }
+  .box span::after {
+    font-size: 1rem;
+  }
+}
+
+.msg {
+  width: 100%;
+  font-size: 2rem;
+  line-height: 1.6;
+  text-align: center;
+  padding: 20px;
 }
