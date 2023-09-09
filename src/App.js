@@ -29,11 +29,10 @@ function App() {
 
   return (
     <>
-      {console.log(process.env.REACT_APP_THE_MESSAGE)}
       {msg ? (
         <p className="msg">{process.env.REACT_APP_THE_MESSAGE}</p>
       ) : (
-        <>
+        <>.REACT_APP_THE_MESSAGE
           <h2 className="title">Happy Birthday To Me</h2>
           <div className="box">
             <span id="days" data-name="days">
