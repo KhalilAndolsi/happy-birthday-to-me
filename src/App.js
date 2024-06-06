@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const birthDate = new Date("06 06 2024 00:00:00").getTime();
+  const birthDate = new Date("06 06 2025 00:00:00").getTime();
   const [msg, setMsg] = useState(false);
   const [days, setDays] = useState();
   const [hours, setHours] = useState();
